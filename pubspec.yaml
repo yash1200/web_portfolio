@@ -26,6 +26,7 @@ dependencies:
   cupertino_icons: ^0.1.3
   flare_flutter:
   google_fonts:
+  url_launcher:
 
 dev_dependencies:
   flutter_test:

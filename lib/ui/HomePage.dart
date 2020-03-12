@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:resumeflutter/ui/Introduction.dart';
 import 'package:resumeflutter/utils/contants.dart';
 
+import 'About.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -37,6 +39,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: defaultLight,
       appBar: AppBar(
         backgroundColor: backgroundColor,
         elevation: elevation,
@@ -47,7 +50,7 @@ class _HomePageState extends State<HomePage> {
           shrinkWrap: true,
           children: <Widget>[
             Introduction(),
-            Introduction(),
+            About(),
           ],
         ),
       ),

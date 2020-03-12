@@ -35,7 +35,7 @@ class Introduction extends StatelessWidget {
                 height: 5,
               ),
               CustomFlatButton(
-                onTap: (){},
+                onTap: () {},
                 text: 'Hire Me',
               ),
             ],
