@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
+import 'package:resumeflutter/utils/CustomFlatbutton.dart';
 import 'package:resumeflutter/utils/contants.dart';
 
 class Introduction extends StatelessWidget {
@@ -33,22 +34,9 @@ class Introduction extends StatelessWidget {
               SizedBox(
                 height: 5,
               ),
-              FlatButton(
-                onPressed: () {},
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(30,12,30,12),
-                  child: Text(
-                    'Hire Me',
-                    style: defaultButtonStyle,
-                  ),
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  side: BorderSide(
-                    color: defaultYellow,
-                    width: 2,
-                  ),
-                ),
+              CustomFlatButton(
+                onTap: (){},
+                text: 'Hire Me',
               ),
             ],
           ),
