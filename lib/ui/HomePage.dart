@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resumeflutter/ui/Experiences.dart';
 import 'package:resumeflutter/ui/Introduction.dart';
 import 'package:resumeflutter/utils/contants.dart';
 
@@ -51,6 +52,7 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             Introduction(),
             About(),
+            Experiences(),
           ],
         ),
       ),

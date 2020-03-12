@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'contants.dart';
+import 'package:resumeflutter/Extensions/hover_extensions.dart';
 
 class CustomFlatButton extends StatelessWidget {
   VoidCallback onTap;
@@ -26,6 +27,6 @@ class CustomFlatButton extends StatelessWidget {
           width: 2,
         ),
       ),
-    );
+    ).showCursorOnHover;
   }
 }
