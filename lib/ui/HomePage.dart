@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resumeflutter/ui/Education.dart';
 import 'package:resumeflutter/ui/Experiences.dart';
 import 'package:resumeflutter/ui/Introduction.dart';
 import 'package:resumeflutter/utils/contants.dart';
@@ -53,6 +54,7 @@ class _HomePageState extends State<HomePage> {
             Introduction(),
             About(),
             Experiences(),
+            Education(),
           ],
         ),
       ),

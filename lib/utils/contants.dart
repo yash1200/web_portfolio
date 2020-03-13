@@ -31,11 +31,7 @@ TextStyle defaultStyle = TextStyle(
 );
 
 TextStyle styleDescription = TextStyle(
-  color: defaultGrey,
-  fontSize: 16,
-  fontWeight: FontWeight.w100,
-  height: 1.5
-);
+    color: defaultGrey, fontSize: 16, fontWeight: FontWeight.w100, height: 1.5);
 
 TextStyle styleRole = TextStyle(
   color: Colors.white,
@@ -55,7 +51,8 @@ String about =
     " Data Structures and Algorithms.\n\nI'm a 4 star coder on Codechef. I "
     "qualified for regional level in ACM ICPC, and have also participated"
     " in Google Hashcode and Google Kickstart. Other than coding, my interests "
-    "lie in Cricket & Sudoku as well.";
+    "lie in Cricket, Soduko, Sci-fi movies & exploring latest technology "
+    "advancements in the developing world.";
 
 String experience = 'The only source of knowledge is experience';
 
@@ -77,5 +74,20 @@ List<ModelExperience> exp = [
     "Flutter Developer",
     "Aeologic Technologies",
     'I worked as a Flutter developer at Aeologic and did projects as per the requirements',
+  ),
+];
+
+List<ModelExperience> education = [
+  ModelExperience(
+    'April 2005 - March 2018',
+    'Inter School Student',
+    'Ingraham English School',
+    'Percentage - 90.60 % in 12th ISC Board',
+  ),
+  ModelExperience(
+    'August 2018 - Present',
+    'B.Tech Student',
+    'Jamia Millia Islamia',
+    'Currently pursuing a 4 year Bachelor of Technology course in Computer Ebgineering',
   ),
 ];
