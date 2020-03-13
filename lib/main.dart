@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:resumeflutter/ui/HomePage.dart';
 
 void main() {
@@ -11,7 +12,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Yash Johri',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(),
+      theme: ThemeData(
+          textTheme: GoogleFonts.googleSansTextTheme(
+            Theme.of(context).textTheme,
+          )
+      ),
       home: HomePage(),
     );
   }
