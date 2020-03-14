@@ -10,7 +10,7 @@ class Skills extends StatelessWidget {
     return Container(
       height: size.height * 0.70,
       width: size.width,
-      color: defaultLight,
+      color: defaultLighter,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,

@@ -10,7 +10,7 @@ class Education extends StatelessWidget {
     return Container(
       height: size.height * 0.60,
       width: size.width,
-      color: defaultLighter,
+      color: defaultLight,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,

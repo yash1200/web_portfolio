@@ -54,9 +54,9 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             Introduction(),
             About(),
-            Experiences(),
             Education(),
             Skills(),
+            Experiences(),
           ],
         ),
       ),
