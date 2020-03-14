@@ -16,6 +16,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   ScrollController scrollController;
   double elevation = 0;
+  int currentIndex = 0;
   Color backgroundColor = defaultLight;
 
   scrollListener() {
@@ -40,6 +41,14 @@ class _HomePageState extends State<HomePage> {
     super.initState();
   }
 
+  List<String> tops = [
+    'About',
+    'Education',
+    'Skills',
+    'Experience',
+    'Contact Me'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,20 +56,47 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: backgroundColor,
         elevation: elevation,
+        actions: <Widget>[
+          ListView.builder(
+            itemCount: tops.length,
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              return GestureDetector(
+                onTap: () {
+                  print(index);
+                  scrollController.animateTo(
+                    index.toDouble(),
+                    duration: Duration(seconds: 1),
+                    curve: Curves.linear,
+                  );
+                  setState(() {
+                    currentIndex = index;
+                  });
+                },
+                child: Text(
+                  tops[index],
+                  style: TextStyle(
+                    color: index == currentIndex ? defaultYellow : defaultGrey,
+                  ),
+                ),
+              );
+            },
+          ),
+        ],
       ),
-      body: NotificationListener(
-        child: ListView(
-          controller: scrollController,
-          shrinkWrap: true,
-          children: <Widget>[
-            Introduction(),
-            About(),
-            Education(),
-            Skills(),
-            Experiences(),
-            Contact(),
-          ],
-        ),
+      body: ListView(
+        controller: scrollController,
+        shrinkWrap: true,
+        children: <Widget>[
+          Introduction(),
+          About(),
+          Education(),
+          Skills(),
+          Experiences(),
+          Contact(),
+        ],
       ),
     );
   }
