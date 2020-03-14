@@ -5,8 +5,13 @@ import 'package:resumeflutter/utils/contants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class About extends StatelessWidget {
-  _launchURL() async {
-    const url = 'https://github.com/yash1200?tab=repositories';
+  _launchURL(bool cv) async {
+    var url;
+    if (cv)
+      url = 'https://github.com/yash1200?tab=repositories';
+    else
+      url =
+      'https://drive.google.com/open?id=1ziNgDm5Ev70myOVnERdOMjDSW5fLOYHu';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -53,15 +58,17 @@ class About extends StatelessWidget {
                   CustomFlatButton(
                     text: 'View Works',
                     onTap: () {
-                      _launchURL();
+                      _launchURL(false);
                     },
                   ),
                   SizedBox(
                     width: 20,
                   ),
                   CustomFlatButton(
-                    text: 'Download CV',
-                    onTap: () {},
+                    text: 'View CV',
+                    onTap: () {
+                      _launchURL(true);
+                    },
                   ),
                 ],
               )

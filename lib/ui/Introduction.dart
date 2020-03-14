@@ -4,8 +4,18 @@ import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:resumeflutter/utils/CustomFlatbutton.dart';
 import 'package:resumeflutter/utils/contants.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Introduction extends StatelessWidget {
+  _launchURL() async {
+    const url = 'https://drive.google.com/open?id=1ziNgDm5Ev70myOVnERdOMjDSW5fLOYHu';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -35,8 +45,10 @@ class Introduction extends StatelessWidget {
                 height: 5,
               ),
               CustomFlatButton(
-                onTap: () {},
-                text: 'Hire Me',
+                onTap: () {
+                  _launchURL();
+                },
+                text: 'View CV',
               ),
             ],
           ),
