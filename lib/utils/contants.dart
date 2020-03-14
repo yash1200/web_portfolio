@@ -63,18 +63,6 @@ List<ModelExperience> exp = [
     "Aeologic Technologies",
     'I worked as a Flutter developer at Aeologic and did projects as per the requirements',
   ),
-  ModelExperience(
-    'May 2019 - July 2019',
-    "Flutter Developer",
-    "Aeologic Technologies",
-    'I worked as a Flutter developer at Aeologic and did projects as per the requirements',
-  ),
-  ModelExperience(
-    'May 2019 - July 2019',
-    "Flutter Developer",
-    "Aeologic Technologies",
-    'I worked as a Flutter developer at Aeologic and did projects as per the requirements',
-  ),
 ];
 
 List<ModelExperience> education = [
@@ -107,7 +95,27 @@ List<String> tools = ['Flutter', 'Android', 'Git', 'Firebase', 'SQL'];
 List<String> toolsImage = [
   'assets/images/flutter.png',
   'assets/images/android.png',
-  'assets/images/github.png',
+  'assets/images/git.png',
   'assets/images/firebase.png',
   'assets/images/sql.png',
+];
+
+List<String> social = [
+  'assets/images/github.png',
+  'assets/images/codechef.png',
+  'assets/images/codeforces.png',
+  'assets/images/hackerrank.png',
+  'assets/images/instagram.png',
+  'assets/images/linkedin.png',
+  'assets/images/twitter.png',
+];
+
+List<String> socialName = [
+  'Github',
+  'Codechef',
+  'Codeforces',
+  'Hackerrank',
+  'Instagram',
+  'Linkedin',
+  'Twitter',
 ];
