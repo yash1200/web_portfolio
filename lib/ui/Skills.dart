@@ -8,7 +8,7 @@ class Skills extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 0.80,
+      height: size.height * 0.70,
       width: size.width,
       color: defaultLight,
       child: Column(
@@ -20,7 +20,7 @@ class Skills extends StatelessWidget {
             text: 'Skills',
           ),
           SizedBox(
-            height: 20,
+            height: 70,
           ),
           Container(
             height: size.height * 0.20,
@@ -30,9 +30,12 @@ class Skills extends StatelessWidget {
               physics: NeverScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return CustomContainer(
-                  image: toolsImage[index],
-                  text: tools[index],
+                return Padding(
+                  padding: const EdgeInsets.fromLTRB(10,0,10,0),
+                  child: CustomContainer(
+                    image: toolsImage[index],
+                    text: tools[index],
+                  ),
                 );
               },
             ),
@@ -48,9 +51,12 @@ class Skills extends StatelessWidget {
               physics: NeverScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return CustomContainer(
-                  image: langImage[index],
-                  text: language[index],
+                return Padding(
+                  padding: const EdgeInsets.fromLTRB(10,0,10,0),
+                  child: CustomContainer(
+                    image: langImage[index],
+                    text: language[index],
+                  ),
                 );
               },
             ),
