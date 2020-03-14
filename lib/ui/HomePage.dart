@@ -6,6 +6,7 @@ import 'package:resumeflutter/ui/Education.dart';
 import 'package:resumeflutter/ui/Experiences.dart';
 import 'package:resumeflutter/ui/Introduction.dart';
 import 'package:resumeflutter/utils/contants.dart';
+import 'package:resumeflutter/Extensions/hover_extensions.dart';
 
 import 'About.dart';
 import 'Skills.dart';
@@ -64,28 +65,35 @@ class _HomePageState extends State<HomePage> {
         elevation: elevation,
         actions: <Widget>[
           ListView.builder(
+            padding: EdgeInsets.only(right: 30),
             itemCount: tops.length,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
-              return GestureDetector(
-                onTap: () {
-                  scrollController.animateTo(
-                    index * size.height * 0.60,
-                    duration: Duration(seconds: 1),
-                    curve: Curves.linear,
-                  );
-                  provider.setCurrentIndex(index);
-                },
-                child: Text(
-                  tops[index],
-                  style: TextStyle(
-                    color: index == provider.currentIndex
-                        ? defaultYellow
-                        : defaultGrey,
+              return Center(
+                child: GestureDetector(
+                  onTap: () {
+                    scrollController.animateTo(
+                      index * size.height * 0.60,
+                      duration: Duration(seconds: 1),
+                      curve: Curves.linear,
+                    );
+                    provider.setCurrentIndex(index);
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                    child: Text(
+                      tops[index],
+                      style: TextStyle(
+                        color: index == provider.currentIndex
+                            ? defaultYellow
+                            : defaultGrey,
+                        fontSize: 20,
+                      ),
+                    ),
                   ),
-                ),
+                ).showCursorOnHover,
               );
             },
           ),

@@ -20,7 +20,7 @@ class Introduction extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 0.80,
+      height: size.height * 0.75,
       color: defaultLight,
       child: Row(
         mainAxisSize: MainAxisSize.min,
