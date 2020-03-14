@@ -91,3 +91,23 @@ List<ModelExperience> education = [
     'Currently pursuing a 4 year Bachelor of Technology course in Computer Ebgineering',
   ),
 ];
+
+List<String> language = ['C', 'C++', 'Dart', 'Java', 'Python'];
+
+List<String> langImage = [
+  'assets/images/c.png',
+  'assets/images/cpp.png',
+  'assets/images/dart.png',
+  'assets/images/java.png',
+  'assets/images/python.png',
+];
+
+List<String> tools = ['Flutter', 'Android', 'Git', 'Firebase', 'SQL'];
+
+List<String> toolsImage = [
+  'assets/images/flutter.png',
+  'assets/images/android.png',
+  'assets/images/github.png',
+  'assets/images/firebase.png',
+  'assets/images/sql.png',
+];

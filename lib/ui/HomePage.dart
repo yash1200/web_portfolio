@@ -5,6 +5,7 @@ import 'package:resumeflutter/ui/Introduction.dart';
 import 'package:resumeflutter/utils/contants.dart';
 
 import 'About.dart';
+import 'Skills.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -55,6 +56,7 @@ class _HomePageState extends State<HomePage> {
             About(),
             Experiences(),
             Education(),
+            Skills(),
           ],
         ),
       ),
