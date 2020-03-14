@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:resumeflutter/AppProvider/AppProvider.dart';
 import 'package:resumeflutter/ui/Contact.dart';
 import 'package:resumeflutter/ui/Education.dart';
 import 'package:resumeflutter/ui/Experiences.dart';
@@ -16,7 +18,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   ScrollController scrollController;
   double elevation = 0;
-  int currentIndex = 0;
   Color backgroundColor = defaultLight;
 
   scrollListener() {
@@ -42,6 +43,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   List<String> tops = [
+    'Intro',
     'About',
     'Education',
     'Skills',
@@ -51,6 +53,18 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery
+        .of(context)
+        .size;
+    List<double> height = [
+      size.height * 0.80,
+      size.height * 60,
+      size.height * 60,
+      size.height * 70,
+      size.height * 80,
+      size.height * 50,
+    ];
+    var provider = Provider.of<AppProvider>(context);
     return Scaffold(
       backgroundColor: defaultLight,
       appBar: AppBar(
@@ -65,20 +79,19 @@ class _HomePageState extends State<HomePage> {
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () {
-                  print(index);
                   scrollController.animateTo(
-                    index.toDouble(),
+                    index * size.height * 0.60,
                     duration: Duration(seconds: 1),
                     curve: Curves.linear,
                   );
-                  setState(() {
-                    currentIndex = index;
-                  });
+                  provider.setCurrentIndex(index);
                 },
                 child: Text(
                   tops[index],
                   style: TextStyle(
-                    color: index == currentIndex ? defaultYellow : defaultGrey,
+                    color: index == provider.currentIndex
+                        ? defaultYellow
+                        : defaultGrey,
                   ),
                 ),
               );
@@ -86,17 +99,25 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: ListView(
-        controller: scrollController,
-        shrinkWrap: true,
-        children: <Widget>[
-          Introduction(),
-          About(),
-          Education(),
-          Skills(),
-          Experiences(),
-          Contact(),
-        ],
+      body: NotificationListener(
+        // ignore: missing_return
+        onNotification: (scrollNotification) {
+          provider.setCurrentIndex(
+            scrollController.offset ~/ (size.height * 0.60),
+          );
+        },
+        child: ListView(
+          controller: scrollController,
+          shrinkWrap: true,
+          children: <Widget>[
+            Introduction(),
+            About(),
+            Education(),
+            Skills(),
+            Experiences(),
+            Contact(),
+          ],
+        ),
       ),
     );
   }

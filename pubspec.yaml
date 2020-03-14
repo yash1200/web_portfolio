@@ -27,8 +27,7 @@ dependencies:
   flare_flutter:
   google_fonts:
   url_launcher:
-  dio:
-  path:
+  provider:
 
 dev_dependencies:
   flutter_test:
