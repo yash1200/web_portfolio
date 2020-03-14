@@ -56,14 +56,6 @@ class _HomePageState extends State<HomePage> {
     var size = MediaQuery
         .of(context)
         .size;
-    List<double> height = [
-      size.height * 0.80,
-      size.height * 60,
-      size.height * 60,
-      size.height * 70,
-      size.height * 80,
-      size.height * 50,
-    ];
     var provider = Provider.of<AppProvider>(context);
     return Scaffold(
       backgroundColor: defaultLight,
