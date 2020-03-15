@@ -19,11 +19,12 @@ class MyApp extends StatelessWidget {
         title: 'Yash Johri',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-            textTheme: GoogleFonts.googleSansTextTheme(
-              Theme
-                  .of(context)
-                  .textTheme,
-            )),
+          textTheme: GoogleFonts.googleSansTextTheme(
+            Theme
+                .of(context)
+                .textTheme,
+          ),
+        ),
         home: HomePage(),
       ),
     );

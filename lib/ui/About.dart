@@ -58,7 +58,7 @@ class About extends StatelessWidget {
                   CustomFlatButton(
                     text: 'View Works',
                     onTap: () {
-                      _launchURL(false);
+                      _launchURL(true);
                     },
                   ),
                   SizedBox(
@@ -67,7 +67,7 @@ class About extends StatelessWidget {
                   CustomFlatButton(
                     text: 'View CV',
                     onTap: () {
-                      _launchURL(true);
+                      _launchURL(false);
                     },
                   ),
                 ],

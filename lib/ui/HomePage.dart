@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:resumeflutter/AppProvider/AppProvider.dart';
 import 'package:resumeflutter/ui/Contact.dart';
@@ -63,9 +64,18 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: backgroundColor,
         elevation: elevation,
+        title: Padding(
+          padding: EdgeInsets.only(left: size.width * 0.10),
+          child: Text(
+            elevation == 1 ? 'Hey There!' : '',
+            style: GoogleFonts.gothicA1(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
         actions: <Widget>[
           ListView.builder(
-            padding: EdgeInsets.only(right: 30),
+            padding: EdgeInsets.only(right: size.width * 0.10),
             itemCount: tops.length,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
