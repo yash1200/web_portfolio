@@ -61,7 +61,8 @@ class _HomePageState extends State<HomePage> {
     var provider = Provider.of<AppProvider>(context);
     return Scaffold(
       backgroundColor: defaultLight,
-      appBar: AppBar(
+      appBar: size.width > limit
+          ? AppBar(
         backgroundColor: backgroundColor,
         elevation: elevation,
         title: Padding(
@@ -108,6 +109,10 @@ class _HomePageState extends State<HomePage> {
             },
           ),
         ],
+      )
+          : PreferredSize(
+        preferredSize: Size.fromHeight(0),
+        child: Container(),
       ),
       body: NotificationListener(
         // ignore: missing_return

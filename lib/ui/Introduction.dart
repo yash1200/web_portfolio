@@ -53,7 +53,7 @@ class Introduction extends StatelessWidget {
             ],
           ),
           SizedBox(
-            width: size.width * 0.10,
+            width: size.width * 0.05,
           ),
           Container(
             height: min(size.height * 0.60, size.width * 0.60),

@@ -8,6 +8,7 @@ Color defaultYellow = Color(0xfffeb633);
 Color defaultGrey = Color(0xffcccccc);
 Color tileColor = Color(0xff333333);
 Color descColor = Color(0xff5a656b);
+double limit = 1000;
 
 TextStyle defaultBold = TextStyle(
   color: Colors.white,
