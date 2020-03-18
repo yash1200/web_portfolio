@@ -1,7 +1,8 @@
 # Yash Johri Portfolio
 
 It is my portfolio built using Flutter web.
-It is live on: yash1200.github.io
+
+It is live on: https://yash1200.github.io/#/
 
 The Introduction Section.
 
