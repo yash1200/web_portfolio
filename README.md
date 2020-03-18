@@ -2,7 +2,7 @@
 
 It is my portfolio built using Flutter web.
 
-It is live on: https://yash1200.github.io/#/
+It is live on: https://yash1200.github.io/#/ (Not optimized for Mobile experience)
 
 The Introduction Section.
 
