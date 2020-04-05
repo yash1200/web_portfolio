@@ -121,17 +121,18 @@ class _HomePageState extends State<HomePage> {
             scrollController.offset ~/ (size.height * 0.60),
           );
         },
-        child: ListView(
+        child: SingleChildScrollView(
           controller: scrollController,
-          shrinkWrap: true,
-          children: <Widget>[
-            Introduction(),
-            About(),
-            Education(),
-            Skills(),
-            Experiences(),
-            Contact(),
-          ],
+          child: Column(
+            children: <Widget>[
+              Introduction(),
+              About(),
+              Education(),
+              Skills(),
+              Experiences(),
+              Contact(),
+            ],
+          ),
         ),
       ),
     );
