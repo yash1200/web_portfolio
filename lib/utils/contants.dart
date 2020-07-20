@@ -81,7 +81,14 @@ List<ModelExperience> education = [
   ),
 ];
 
-List<String> language = ['C', 'C++', 'Dart', 'Java', 'Python'];
+List<String> language = [
+  'C',
+  'C++',
+  'Dart',
+  'Java',
+  'Python',
+  'Javascript',
+];
 
 List<String> langImage = [
   'assets/images/c.png',
@@ -89,16 +96,25 @@ List<String> langImage = [
   'assets/images/dart.png',
   'assets/images/java.png',
   'assets/images/python.png',
+  'assets/images/javascript.png',
 ];
 
-List<String> tools = ['Flutter', 'Android', 'Git', 'Firebase', 'SQL'];
+List<String> tools = [
+  'Flutter',
+  'Android',
+  'Git',
+  'Firebase',
+  'Node JS',
+  'Mongo DB'
+];
 
 List<String> toolsImage = [
   'assets/images/flutter.png',
   'assets/images/android.png',
   'assets/images/git.png',
   'assets/images/firebase.png',
-  'assets/images/sql.png',
+  'assets/images/nodejs.png',
+  'assets/images/mongodb.png',
 ];
 
 List<String> social = [

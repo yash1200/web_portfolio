@@ -12,17 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (BuildContext context) {
-        return AppProvider();
-      },
+      create: (_) => AppProvider(),
       child: MaterialApp(
         title: 'Yash Johri',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           textTheme: GoogleFonts.googleSansTextTheme(
-            Theme
-                .of(context)
-                .textTheme,
+            Theme.of(context).textTheme,
           ),
         ),
         home: HomePage(),
