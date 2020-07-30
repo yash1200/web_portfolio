@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:resumeflutter/Model/ModelExperience.dart';
 
+String cVUrl = "https://drive.google.com/file/d/1wAqf5A8C9oPQ4bYpazWG81626BC-lXNq/view?usp=sharing";
+
 Color defaultLight = Color(0xff2b2c2c);
 Color defaultDart = Color(0xff252525);
 Color defaultLighter = Color(0xff303131);

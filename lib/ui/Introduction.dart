@@ -8,7 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class Introduction extends StatelessWidget {
   _launchURL() async {
-    const url = 'https://drive.google.com/open?id=1ziNgDm5Ev70myOVnERdOMjDSW5fLOYHu';
+    var url = cVUrl;
     if (await canLaunch(url)) {
       await launch(url);
     } else {

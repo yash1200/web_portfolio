@@ -38,7 +38,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     scrollController = ScrollController();
     scrollController.addListener(scrollListener);
     super.initState();
@@ -55,65 +54,63 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery
-        .of(context)
-        .size;
+    var size = MediaQuery.of(context).size;
     var provider = Provider.of<AppProvider>(context);
     return Scaffold(
       backgroundColor: defaultLight,
       appBar: size.width > limit
           ? AppBar(
-        backgroundColor: backgroundColor,
-        elevation: elevation,
-        title: Padding(
-          padding: EdgeInsets.only(left: size.width * 0.10),
-          child: Text(
-            elevation == 1 ? 'Hey There!' : '',
-            style: GoogleFonts.gothicA1(
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-        actions: <Widget>[
-          ListView.builder(
-            padding: EdgeInsets.only(right: size.width * 0.10),
-            itemCount: tops.length,
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) {
-              return Center(
-                child: GestureDetector(
-                  onTap: () {
-                    scrollController.animateTo(
-                      index * size.height * 0.60,
-                      duration: Duration(seconds: 1),
-                      curve: Curves.linear,
-                    );
-                    provider.setCurrentIndex(index);
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
-                    child: Text(
-                      tops[index],
-                      style: TextStyle(
-                        color: index == provider.currentIndex
-                            ? defaultYellow
-                            : defaultGrey,
-                        fontSize: 20,
-                      ),
-                    ),
+              backgroundColor: backgroundColor,
+              elevation: elevation,
+              title: Padding(
+                padding: EdgeInsets.only(left: size.width * 0.10),
+                child: Text(
+                  elevation == 1 ? 'Hey There!' : '',
+                  style: GoogleFonts.gothicA1(
+                    fontWeight: FontWeight.bold,
                   ),
-                ).showCursorOnHover,
-              );
-            },
-          ),
-        ],
-      )
+                ),
+              ),
+              actions: <Widget>[
+                ListView.builder(
+                  padding: EdgeInsets.only(right: size.width * 0.10),
+                  itemCount: tops.length,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return Center(
+                      child: GestureDetector(
+                        onTap: () {
+                          scrollController.animateTo(
+                            index * size.height * 0.60,
+                            duration: Duration(seconds: 1),
+                            curve: Curves.linear,
+                          );
+                          provider.setCurrentIndex(index);
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                          child: Text(
+                            tops[index],
+                            style: TextStyle(
+                              color: index == provider.currentIndex
+                                  ? defaultYellow
+                                  : defaultGrey,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      ).showCursorOnHover,
+                    );
+                  },
+                ),
+              ],
+            )
           : PreferredSize(
-        preferredSize: Size.fromHeight(0),
-        child: Container(),
-      ),
+              preferredSize: Size.fromHeight(0),
+              child: Container(),
+            ),
       body: NotificationListener(
         // ignore: missing_return
         onNotification: (scrollNotification) {

@@ -10,8 +10,7 @@ class About extends StatelessWidget {
     if (cv)
       url = 'https://github.com/yash1200?tab=repositories';
     else
-      url =
-      'https://drive.google.com/open?id=1ziNgDm5Ev70myOVnERdOMjDSW5fLOYHu';
+      url = cVUrl;
     if (await canLaunch(url)) {
       await launch(url);
     } else {
