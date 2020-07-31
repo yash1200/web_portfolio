@@ -38,7 +38,7 @@ class Introduction extends StatelessWidget {
                 height: 15,
               ),
               Text(
-                'Android and Flutter Developer',
+                'Full Stack Mobile Developer',
                 style: defaultStyleSmall,
               ),
               SizedBox(
