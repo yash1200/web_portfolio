@@ -1,32 +1,34 @@
 import 'package:flutter/material.dart';
-
-import 'contants.dart';
-import 'package:resumeflutter/Extensions/hover_extensions.dart';
+import 'package:flutter/rendering.dart';
+import 'package:resumeflutter/values/values.dart';
 
 class CustomFlatButton extends StatelessWidget {
-  VoidCallback onTap;
-  String text;
+  final VoidCallback onTap;
+  final String text;
 
   CustomFlatButton({this.onTap, this.text});
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
-      onPressed: onTap,
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(30, 12, 30, 12),
-        child: Text(
-          text,
-          style: defaultButtonStyle,
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: FlatButton(
+        onPressed: onTap,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(30, 12, 30, 12),
+          child: Text(
+            text,
+            style: defaultButtonStyle,
+          ),
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+          side: BorderSide(
+            color: defaultYellow,
+            width: 2,
+          ),
         ),
       ),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
-        side: BorderSide(
-          color: defaultYellow,
-          width: 2,
-        ),
-      ),
-    ).showCursorOnHover;
+    );
   }
 }

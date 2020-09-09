@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         title: 'Yash Johri',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          textTheme: GoogleFonts.googleSansTextTheme(
+          textTheme: GoogleFonts.openSansTextTheme(
             Theme.of(context).textTheme,
           ),
         ),

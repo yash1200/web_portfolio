@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:resumeflutter/AppProvider/AppProvider.dart';
@@ -6,9 +7,7 @@ import 'package:resumeflutter/ui/Contact.dart';
 import 'package:resumeflutter/ui/Education.dart';
 import 'package:resumeflutter/ui/Experiences.dart';
 import 'package:resumeflutter/ui/Introduction.dart';
-import 'package:resumeflutter/utils/contants.dart';
-import 'package:resumeflutter/Extensions/hover_extensions.dart';
-
+import 'package:resumeflutter/values/values.dart';
 import 'About.dart';
 import 'Skills.dart';
 
@@ -18,55 +17,36 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  ScrollController scrollController;
-  double elevation = 0;
-  Color backgroundColor = defaultLight;
+  final ScrollController scrollController = ScrollController();
 
-  scrollListener() {
-    if (scrollController.offset <= scrollController.position.minScrollExtent &&
+  scrollListener(BuildContext context) {
+    final provider = Provider.of<AppProvider>(context, listen: false);
+    if (scrollController.hasClients && scrollController.offset <= scrollController.position.minScrollExtent &&
         !scrollController.position.outOfRange) {
-      setState(() {
-        backgroundColor = defaultLight;
-        elevation = 0;
-      });
-    } else
-      setState(() {
-        backgroundColor = defaultDart;
-        elevation = 1;
-      });
+      provider.setBackgroundColor(defaultLight);
+      provider.setElevation(0);
+    } else {
+      provider.setBackgroundColor(defaultDark);
+      provider.setElevation(1);
+    }
   }
-
-  @override
-  void initState() {
-    scrollController = ScrollController();
-    scrollController.addListener(scrollListener);
-    super.initState();
-  }
-
-  List<String> tops = [
-    'Intro',
-    'About',
-    'Education',
-    'Skills',
-    'Experience',
-    'Contact Me'
-  ];
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    var provider = Provider.of<AppProvider>(context);
+    final provider = Provider.of<AppProvider>(context);
+    scrollController.addListener(scrollListener(context));
     return Scaffold(
       backgroundColor: defaultLight,
       appBar: size.width > limit
           ? AppBar(
-              backgroundColor: backgroundColor,
-              elevation: elevation,
+              backgroundColor: provider.backgroundColor,
+              elevation: provider.elevation,
               title: Padding(
                 padding: EdgeInsets.only(left: size.width * 0.10),
                 child: Text(
-                  elevation == 1 ? 'Hey There!' : '',
-                  style: GoogleFonts.gothicA1(
+                  provider.elevation == 1 ? 'Hey There!' : '',
+                  style: GoogleFonts.openSans(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -89,19 +69,22 @@ class _HomePageState extends State<HomePage> {
                           );
                           provider.setCurrentIndex(index);
                         },
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
-                          child: Text(
-                            tops[index],
-                            style: TextStyle(
-                              color: index == provider.currentIndex
-                                  ? defaultYellow
-                                  : defaultGrey,
-                              fontSize: 20,
+                        child: MouseRegion(
+                          cursor: SystemMouseCursors.click,
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                            child: Text(
+                              tops[index],
+                              style: TextStyle(
+                                color: index == provider.currentIndex
+                                    ? defaultYellow
+                                    : defaultGrey,
+                                fontSize: 20,
+                              ),
                             ),
                           ),
                         ),
-                      ).showCursorOnHover,
+                      ),
                     );
                   },
                 ),
@@ -112,11 +95,11 @@ class _HomePageState extends State<HomePage> {
               child: Container(),
             ),
       body: NotificationListener(
-        // ignore: missing_return
         onNotification: (scrollNotification) {
           provider.setCurrentIndex(
             scrollController.offset ~/ (size.height * 0.60),
           );
+          return;
         },
         child: SingleChildScrollView(
           controller: scrollController,

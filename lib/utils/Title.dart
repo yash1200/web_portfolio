@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:resumeflutter/utils/contants.dart';
+import 'package:resumeflutter/values/values.dart';
 
 class CustomTitle extends StatelessWidget {
-  String text;
-  bool center = true;
+  final String text;
+  final bool center;
 
-  CustomTitle({this.text, this.center});
+  CustomTitle({this.text, this.center = true});
 
   @override
   Widget build(BuildContext context) {

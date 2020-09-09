@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resumeflutter/utils/CustomFlatbutton.dart';
 import 'package:resumeflutter/utils/Title.dart';
-import 'package:resumeflutter/utils/contants.dart';
+import 'package:resumeflutter/values/values.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class About extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resumeflutter/utils/CustomTile.dart';
 import 'package:resumeflutter/utils/Title.dart';
-import 'package:resumeflutter/utils/contants.dart';
+import 'package:resumeflutter/values/values.dart';
 
 class Education extends StatelessWidget {
   @override

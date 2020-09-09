@@ -1,22 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:resumeflutter/Extensions/hover_extensions.dart';
 import 'package:resumeflutter/utils/Title.dart';
-import 'package:resumeflutter/utils/contants.dart';
+import 'package:resumeflutter/values/values.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Contact extends StatelessWidget {
-  List<String> urlList = [
-    'https://github.com/yash1200',
-    'https://www.codechef.com/users/yashjohri_1200',
-    'https://codeforces.com/profile/yash1200',
-    'https://www.hackerrank.com/yashjohri1200',
-    'https://www.instagram.com/just_johri/?hl=en',
-    'https://www.linkedin.com/in/yash-johri-61014717b/',
-    'https://twitter.com/YashJohri17',
-  ];
-
   _launchURL(int index) async {
     if (await canLaunch(urlList[index])) {
       await launch(urlList[index]);
@@ -62,7 +51,7 @@ class Contact extends StatelessWidget {
                         width: 5,
                       ),
                       Text(
-                        'New Delhi, India',
+                        location,
                         style: styleDescription,
                       ),
                     ],
@@ -81,7 +70,7 @@ class Contact extends StatelessWidget {
                         width: 5,
                       ),
                       SelectableText(
-                        'yashjohri1200@gmail.com',
+                        email,
                         style: styleDescription,
                       ),
                     ],
@@ -117,18 +106,22 @@ class Contact extends StatelessWidget {
                               onTap: () {
                                 _launchURL(index);
                               },
-                              child: Padding(
-                                padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                child: Tooltip(
-                                  message: socialName[index],
-                                  child: Image.asset(
-                                    social[index],
-                                    height: size.width * 0.02,
-                                    width: size.width * 0.02,
+                              child: MouseRegion(
+                                cursor: SystemMouseCursors.click,
+                                child: Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                                  child: Tooltip(
+                                    message: socialName[index],
+                                    child: Image.asset(
+                                      social[index],
+                                      height: size.width * 0.02,
+                                      width: size.width * 0.02,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ).showCursorOnHover;
+                            );
                           },
                         ),
                       ),

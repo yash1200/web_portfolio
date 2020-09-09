@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:resumeflutter/Model/ModelExperience.dart';
-import 'package:resumeflutter/utils/contants.dart';
+
+import 'package:resumeflutter/values/values.dart';
 
 class CustomTile extends StatelessWidget {
-  ModelExperience exp;
+  final ModelExperience exp;
 
   CustomTile({this.exp});
 

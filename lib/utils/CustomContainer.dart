@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:resumeflutter/utils/contants.dart';
+import 'package:resumeflutter/values/values.dart';
 
 class CustomContainer extends StatelessWidget {
-  String text, image;
+  final String text, image;
 
   CustomContainer({this.text, this.image});
 
