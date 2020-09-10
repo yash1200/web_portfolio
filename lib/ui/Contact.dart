@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:resumeflutter/utils/Title.dart';
 import 'package:resumeflutter/values/values.dart';
@@ -72,6 +73,11 @@ class Contact extends StatelessWidget {
                       SelectableText(
                         email,
                         style: styleDescription,
+                        enableInteractiveSelection: true,
+                        toolbarOptions: ToolbarOptions(
+                          copy: true,
+                          selectAll: true,
+                        ),
                       ),
                     ],
                   ),

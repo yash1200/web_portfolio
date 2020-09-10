@@ -21,6 +21,8 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.openSansTextTheme(
             Theme.of(context).textTheme,
           ),
+          textSelectionColor: selectionColor,
+          textSelectionHandleColor: selectionColor,
         ),
         home: HomePage(),
       ),

@@ -7,3 +7,4 @@ Color defaultYellow = Color(0xfffeb633);
 Color defaultGrey = Color(0xffcccccc);
 Color tileColor = Color(0xff333333);
 Color descColor = Color(0xff5a656b);
+Color selectionColor = Color(0xff2fb096);
