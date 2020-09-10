@@ -19,26 +19,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final ScrollController scrollController = ScrollController();
 
-  scrollListener(BuildContext context) {
-    final provider = Provider.of<AppProvider>(context, listen: false);
-    if (scrollController.hasClients &&
-        scrollController.offset <= scrollController.position.minScrollExtent &&
-        !scrollController.position.outOfRange) {
-      provider.setBackgroundColor(defaultLight);
-      provider.setElevation(0);
-    } else {
-      provider.setBackgroundColor(defaultDark);
-      provider.setElevation(1);
-    }
-  }
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    scrollController.addListener(scrollListener(context));
-  }
-
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -103,6 +83,13 @@ class _HomePageState extends State<HomePage> {
             ),
       body: NotificationListener(
         onNotification: (scrollNotification) {
+          if (scrollController.offset == 0) {
+            provider.setBackgroundColor(defaultLight);
+            provider.setElevation(0);
+          } else {
+            provider.setBackgroundColor(defaultDark);
+            provider.setElevation(1);
+          }
           provider.setCurrentIndex(
             scrollController.offset ~/ (size.height * 0.60),
           );
