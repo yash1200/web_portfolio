@@ -3,27 +3,11 @@ class ModelExperience {
 
   ModelExperience(this._date, this._role, this._company, this._description);
 
-  get description => _description;
+  String get description => _description;
 
-  setDescription(value) {
-    _description = value;
-  }
+  String get company => _company;
 
-  get company => _company;
-
-  setCompany(value) {
-    _company = value;
-  }
-
-  get role => _role;
-
-  setRole(value) {
-    _role = value;
-  }
+  String get role => _role;
 
   String get date => _date;
-
-  setDate(String value) {
-    _date = value;
-  }
 }

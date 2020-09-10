@@ -31,21 +31,21 @@ class CustomTile extends StatelessWidget {
             style: styleCompany,
           ),
           SizedBox(
-            height: 12,
+            height: 10,
           ),
           Text(
             exp.role,
             style: styleRole,
           ),
           SizedBox(
-            height: 12,
+            height: 10,
           ),
           Text(
             exp.company,
             style: styleCompany,
           ),
           SizedBox(
-            height: 20,
+            height: 18,
           ),
           Text(
             exp.description,

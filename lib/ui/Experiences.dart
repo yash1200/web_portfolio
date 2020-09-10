@@ -32,15 +32,15 @@ class Experiences extends StatelessWidget {
           Container(
             height: size.width * 0.185,
             child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              itemCount: exp.length,
               itemBuilder: (context, index) {
                 return CustomTile(
                   exp: exp[index],
                 );
               },
-              scrollDirection: Axis.horizontal,
-              shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              itemCount: exp.length,
             ),
           ),
         ],

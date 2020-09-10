@@ -16,10 +16,16 @@ List<String> tops = [
 
 List<ModelExperience> exp = [
   ModelExperience(
-    'May 2019 - July 2019',
+    "May 2019 - August 2019",
     "Flutter Developer",
     "Aeologic Technologies",
-    'I worked as a Flutter developer at Aeologic and did projects as per the requirements',
+    "I worked as a Flutter developer, made modules and applications during the internship.",
+  ),
+  ModelExperience(
+    "August 2020 - Present",
+    "Open Source Contributor",
+    "Flutter",
+    "Contributed to the open source flutter/plugins repository.",
   ),
 ];
 
