@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    //scrollController.addListener(scrollListener(context));
+    scrollController.addListener(scrollListener(context));
   }
 
   @override
