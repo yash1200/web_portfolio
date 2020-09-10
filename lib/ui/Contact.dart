@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:resumeflutter/utils/Title.dart';
 import 'package:resumeflutter/values/values.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Contact extends StatelessWidget {
   _launchURL(int index) async {
@@ -78,6 +79,16 @@ class Contact extends StatelessWidget {
                           copy: true,
                           selectAll: true,
                         ),
+                        onTap: () {
+                          Clipboard.setData(ClipboardData(text: email));
+                          Fluttertoast.showToast(
+                            msg: "Email copied to clipboard",
+                            textColor: defaultYellow,
+                            webBgColor:
+                                "linear-gradient(to right, #2b2c2c, #252525)",
+                            webPosition: "center",
+                          );
+                        },
                       ),
                     ],
                   ),
