@@ -4,19 +4,19 @@ It is my portfolio built using Flutter web.
 
 It is live on: https://yash1200.github.io/#/ (Not optimized for Mobile experience)
 
-### The Introduction Section
+### Introduction :
 
 <img src="https://imgur.com/HipX0jF.png">
 
-### The About Me Section
+### About Me :
 
 <img src="https://imgur.com/PWCFKuY.png">
 
-### The Skills Section
+### Skills :
 
 <img src="https://imgur.com/1QOt01H.png">
 
-### The Work Experience Section
+### Work Experience :
 
 <img src="https://imgur.com/GDzFCbD.png">
 
