@@ -6,19 +6,19 @@ It is live on: https://yash1200.github.io/#/ (Not optimized for Mobile experienc
 
 ### Introduction :
 
-<img src="https://imgur.com/HipX0jF.png">
+<img src="https://imgur.com/kawh0N1.png">
 
 ### About Me :
 
-<img src="https://imgur.com/PWCFKuY.png">
+<img src="https://imgur.com/6mmD4X8.png">
 
 ### Skills :
 
-<img src="https://imgur.com/1QOt01H.png">
+<img src="https://imgur.com/FcroRyu.png">
 
 ### Work Experience :
 
-<img src="https://imgur.com/GDzFCbD.png">
+<img src="https://imgur.com/5uJFQwy.png">
 
 Got inspired from this theme: http://droitthemes.com/wp/mak/home-dark/
 
