@@ -31,7 +31,7 @@ class Skills extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.fromLTRB(10,0,10,0),
+                  padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                   child: CustomContainer(
                     image: toolsImage[index],
                     text: tools[index],
@@ -52,7 +52,7 @@ class Skills extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.fromLTRB(10,0,10,0),
+                  padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                   child: CustomContainer(
                     image: langImage[index],
                     text: language[index],

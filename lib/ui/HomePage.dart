@@ -21,7 +21,8 @@ class _HomePageState extends State<HomePage> {
 
   scrollListener(BuildContext context) {
     final provider = Provider.of<AppProvider>(context, listen: false);
-    if (scrollController.hasClients && scrollController.offset <= scrollController.position.minScrollExtent &&
+    if (scrollController.hasClients &&
+        scrollController.offset <= scrollController.position.minScrollExtent &&
         !scrollController.position.outOfRange) {
       provider.setBackgroundColor(defaultLight);
       provider.setElevation(0);
@@ -32,10 +33,16 @@ class _HomePageState extends State<HomePage> {
   }
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    //scrollController.addListener(scrollListener(context));
+  }
+
+  @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     final provider = Provider.of<AppProvider>(context);
-    scrollController.addListener(scrollListener(context));
     return Scaffold(
       backgroundColor: defaultLight,
       appBar: size.width > limit
