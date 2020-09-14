@@ -2,20 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:resumeflutter/network/network.dart';
 import 'package:resumeflutter/utils/Title.dart';
 import 'package:resumeflutter/values/values.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class Contact extends StatelessWidget {
-  _launchURL(int index) async {
-    if (await canLaunch(urlList[index])) {
-      await launch(urlList[index]);
-    } else {
-      throw 'Could not launch ${urlList[index]}';
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -121,7 +113,7 @@ class Contact extends StatelessWidget {
                           itemBuilder: (context, index) {
                             return GestureDetector(
                               onTap: () {
-                                _launchURL(index);
+                                Network().launchURL(contactUrlList[index]);
                               },
                               child: MouseRegion(
                                 cursor: SystemMouseCursors.click,

@@ -91,7 +91,7 @@ List<String> social = [
   'assets/images/twitter.png',
 ];
 
-List<String> urlList = [
+List<String> contactUrlList = [
   'https://github.com/yash1200',
   'https://www.codechef.com/users/yashjohri_1200',
   'https://codeforces.com/profile/yash1200',

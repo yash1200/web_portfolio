@@ -1,23 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:resumeflutter/network/network.dart';
 import 'package:resumeflutter/utils/CustomFlatbutton.dart';
 import 'package:resumeflutter/utils/Title.dart';
 import 'package:resumeflutter/values/values.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class About extends StatelessWidget {
-  _launchURL(bool cv) async {
-    var url;
-    if (cv)
-      url = 'https://github.com/yash1200?tab=repositories';
-    else
-      url = cVUrl;
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -57,7 +44,7 @@ class About extends StatelessWidget {
                   CustomFlatButton(
                     text: 'View Works',
                     onTap: () {
-                      _launchURL(true);
+                      Network().launchURL(githubRepoUrl);
                     },
                   ),
                   SizedBox(
@@ -66,7 +53,7 @@ class About extends StatelessWidget {
                   CustomFlatButton(
                     text: 'View CV',
                     onTap: () {
-                      _launchURL(false);
+                      Network().launchURL(resumeUrl);
                     },
                   ),
                 ],

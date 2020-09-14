@@ -2,20 +2,11 @@ import 'dart:math';
 
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
+import 'package:resumeflutter/network/network.dart';
 import 'package:resumeflutter/utils/CustomFlatbutton.dart';
 import 'package:resumeflutter/values/values.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Introduction extends StatelessWidget {
-  _launchURL() async {
-    var url = cVUrl;
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -46,7 +37,7 @@ class Introduction extends StatelessWidget {
               ),
               CustomFlatButton(
                 onTap: () {
-                  _launchURL();
+                  Network().launchURL(resumeUrl);
                 },
                 text: 'View CV',
               ),
