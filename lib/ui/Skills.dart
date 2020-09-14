@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:resumeflutter/utils/CustomContainer.dart';
-import 'package:resumeflutter/utils/Title.dart';
+import 'package:resumeflutter/widgets/CustomContainer.dart';
+import 'package:resumeflutter/widgets/Title.dart';
 import 'package:resumeflutter/values/values.dart';
 
 class Skills extends StatelessWidget {

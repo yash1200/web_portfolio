@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resumeflutter/network/network.dart';
-import 'package:resumeflutter/utils/CustomFlatbutton.dart';
-import 'package:resumeflutter/utils/Title.dart';
+import 'package:resumeflutter/widgets/CustomFlatbutton.dart';
+import 'package:resumeflutter/widgets/Title.dart';
 import 'package:resumeflutter/values/values.dart';
 
 class About extends StatelessWidget {

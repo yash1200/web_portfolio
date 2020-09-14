@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:resumeflutter/network/network.dart';
-import 'package:resumeflutter/utils/CustomFlatbutton.dart';
+import 'package:resumeflutter/widgets/CustomFlatbutton.dart';
 import 'package:resumeflutter/values/values.dart';
 
 class Introduction extends StatelessWidget {

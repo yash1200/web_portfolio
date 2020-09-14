@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:resumeflutter/network/network.dart';
-import 'package:resumeflutter/utils/Title.dart';
+import 'package:resumeflutter/widgets/Title.dart';
 import 'package:resumeflutter/values/values.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
