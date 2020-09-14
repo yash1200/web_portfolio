@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                       child: GestureDetector(
                         onTap: () {
                           scrollController.animateTo(
-                            index * size.height * 0.60,
+                            index * size.height * 0.65,
                             duration: Duration(seconds: 1),
                             curve: Curves.linear,
                           );
