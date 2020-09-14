@@ -7,6 +7,7 @@ import 'package:resumeflutter/ui/Contact.dart';
 import 'package:resumeflutter/ui/Education.dart';
 import 'package:resumeflutter/ui/Experiences.dart';
 import 'package:resumeflutter/ui/Introduction.dart';
+import 'package:resumeflutter/ui/projects.dart';
 import 'package:resumeflutter/values/values.dart';
 import 'About.dart';
 import 'Skills.dart';
@@ -41,7 +42,7 @@ class _HomePageState extends State<HomePage> {
               actions: <Widget>[
                 ListView.builder(
                   padding: EdgeInsets.only(right: size.width * 0.10),
-                  itemCount: tops.length,
+                  itemCount: sections.length,
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
                   scrollDirection: Axis.horizontal,
@@ -61,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
                             child: Text(
-                              tops[index],
+                              sections[index],
                               style: TextStyle(
                                 color: index == provider.currentIndex
                                     ? defaultYellow
@@ -104,6 +105,7 @@ class _HomePageState extends State<HomePage> {
               Education(),
               Skills(),
               Experiences(),
+              Projects(),
               Contact(),
             ],
           ),

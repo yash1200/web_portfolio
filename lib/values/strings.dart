@@ -15,4 +15,4 @@ final String about =
     "lie in Cricket, Soduko, Anime, Sci-fi movies & exploring latest technological "
     "advancements in the developing world.";
 
-final String experience = 'The only source of knowledge is experience';
+final String experienceQoute = 'The only source of knowledge is experience';

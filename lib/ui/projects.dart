@@ -1,30 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:resumeflutter/network/network.dart';
 import 'package:resumeflutter/widgets/CustomTile.dart';
 import 'package:resumeflutter/widgets/Title.dart';
 import 'package:resumeflutter/values/values.dart';
 
-class Experiences extends StatelessWidget {
+class Projects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 0.80,
+      height: size.height * 0.70,
       width: size.width,
-      color: defaultLight,
+      color: defaultLighter,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           CustomTitle(
-            text: 'Work Experiences',
+            text: 'Projects',
             center: true,
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          Text(
-            experienceQoute,
-            style: defaultStyle,
           ),
           SizedBox(
             height: 70,
@@ -35,10 +29,13 @@ class Experiences extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
-              itemCount: experiences.length,
+              itemCount: projects.length,
               itemBuilder: (context, index) {
                 return CustomTile(
-                  exp: experiences[index],
+                  exp: projects[index],
+                  onTap: () {
+                    Network().launchURL(projectsUrlList[index]);
+                  },
                 );
               },
             ),

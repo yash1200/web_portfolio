@@ -6,16 +6,17 @@ export 'package:resumeflutter/values/textStyles.dart';
 
 double limit = 1000;
 
-List<String> tops = [
+List<String> sections = [
   'Intro',
   'About',
   'Education',
   'Skills',
   'Experience',
+  'Projects',
   'Contact Me'
 ];
 
-List<ModelExperience> exp = [
+List<ModelExperience> experiences = [
   ModelExperience(
     "August 2020 - Present",
     "Open Source Contributor",
@@ -42,6 +43,27 @@ List<ModelExperience> education = [
     'B.Tech Student',
     'Jamia Millia Islamia',
     'Currently pursuing a 4 year Bachelor of Technology course in Computer Ebgineering',
+  ),
+];
+
+List<ModelExperience> projects = [
+  ModelExperience(
+    'June 2020 - July 2020',
+    'Petals',
+    'Flutter, NodeJs & MongoDB',
+    'Petal helps restaurants to manage social distancing in post covid world, showing all information by scanning a QR.',
+  ),
+  ModelExperience(
+    'August 2019 - November 2019',
+    'BankGit',
+    'Flutter & Firebase',
+    'BankGit helps you manage your account and transactions more efficiently by breaking your account into branches.',
+  ),
+  ModelExperience(
+    'August 2019 - November 2019',
+    'BoredPages',
+    'Flutter & Firebase',
+    'BoredPages is a social media platform where you can share memes and photos and can make money with its business model.',
   ),
 ];
 
@@ -99,6 +121,12 @@ List<String> contactUrlList = [
   'https://www.instagram.com/just_johri/?hl=en',
   'https://www.linkedin.com/in/yash-johri-61014717b/',
   'https://twitter.com/YashJohri17',
+];
+
+List<String> projectsUrlList = [
+  'https://github.com/yash1200/petals',
+  'https://github.com/yash1200/bank_management',
+  'https://play.google.com/store/apps/details?id=com.boredpages.borespages&hl=en_IN',
 ];
 
 List<String> socialName = [

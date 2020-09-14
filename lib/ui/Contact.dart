@@ -14,7 +14,7 @@ class Contact extends StatelessWidget {
     return Container(
       height: size.height * 0.50,
       width: size.width,
-      color: defaultLighter,
+      color: defaultLight,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
