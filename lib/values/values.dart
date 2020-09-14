@@ -1,4 +1,5 @@
 import 'package:resumeflutter/Model/ModelExperience.dart';
+
 export 'package:resumeflutter/values/colors.dart';
 export 'package:resumeflutter/values/strings.dart';
 export 'package:resumeflutter/values/textStyles.dart';
@@ -16,16 +17,16 @@ List<String> tops = [
 
 List<ModelExperience> exp = [
   ModelExperience(
-    "May 2019 - August 2019",
-    "Flutter Developer",
-    "Aeologic Technologies",
-    "I worked as a Flutter developer, made modules and applications during the internship.",
-  ),
-  ModelExperience(
     "August 2020 - Present",
     "Open Source Contributor",
     "Flutter",
     "Contributed to the open source flutter/plugins repository.",
+  ),
+  ModelExperience(
+    "May 2019 - August 2019",
+    "Flutter Developer",
+    "Aeologic Technologies",
+    "I worked as a Flutter developer, made modules and applications during the internship.",
   ),
 ];
 
