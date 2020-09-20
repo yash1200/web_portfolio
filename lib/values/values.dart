@@ -21,7 +21,7 @@ List<ModelExperience> experiences = [
     "August 2020 - Present",
     "Open Source Contributor",
     "Flutter",
-    "Contributed to the open source flutter/plugins repository.",
+    "Contributed to the open source flutter repositories (flutter, plugins, gallery and packages).",
   ),
   ModelExperience(
     "May 2019 - August 2019",
@@ -105,8 +105,8 @@ List<String> toolsImage = [
 
 List<String> social = [
   'assets/images/github.png',
-  'assets/images/codechef.png',
   'assets/images/codeforces.png',
+  'assets/images/codechef.png',
   'assets/images/hackerrank.png',
   'assets/images/instagram.png',
   'assets/images/linkedin.png',
@@ -115,8 +115,8 @@ List<String> social = [
 
 List<String> contactUrlList = [
   'https://github.com/yash1200',
-  'https://www.codechef.com/users/yashjohri_1200',
   'https://codeforces.com/profile/yash1200',
+  'https://www.codechef.com/users/yashjohri_1200',
   'https://www.hackerrank.com/yashjohri1200',
   'https://www.instagram.com/just_johri/?hl=en',
   'https://www.linkedin.com/in/yash-johri-61014717b/',
@@ -124,15 +124,15 @@ List<String> contactUrlList = [
 ];
 
 List<String> projectsUrlList = [
-  'https://github.com/yash1200/petals',
-  'https://github.com/yash1200/bank_management',
+  'https://github.com/yash1200/Petals',
+  'https://github.com/yash1200/BankGit',
   'https://play.google.com/store/apps/details?id=com.boredpages.borespages&hl=en_IN',
 ];
 
 List<String> socialName = [
   'Github',
-  'Codechef',
   'Codeforces',
+  'Codechef',
   'Hackerrank',
   'Instagram',
   'Linkedin',
