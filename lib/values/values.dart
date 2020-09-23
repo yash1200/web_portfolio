@@ -33,16 +33,16 @@ List<ModelExperience> experiences = [
 
 List<ModelExperience> education = [
   ModelExperience(
-    'April 2005 - March 2018',
-    'Inter School Student',
-    'Ingraham English School',
-    'Percentage - 90.60 % in 12th ISC Board',
-  ),
-  ModelExperience(
     'August 2018 - Present',
     'B.Tech Student',
     'Jamia Millia Islamia',
     'Currently pursuing a 4 year Bachelor of Technology course in Computer Ebgineering',
+  ),
+  ModelExperience(
+    'April 2005 - March 2018',
+    'Inter School Student',
+    'Ingraham English School',
+    'Percentage - 90.60 % in 12th ISC Board',
   ),
 ];
 
