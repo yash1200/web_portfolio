@@ -50,7 +50,7 @@ List<ModelExperience> projects = [
   ModelExperience(
     'June 2020 - July 2020',
     'Petals',
-    'Flutter, NodeJs & MongoDB',
+    'Flutter, VueJs, NodeJs & MongoDB',
     'Petal helps restaurants to manage social distancing in post covid world, showing all information by scanning a QR.',
   ),
   ModelExperience(
