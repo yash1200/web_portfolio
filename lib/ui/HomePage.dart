@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                         onTap: () {
                           scrollController.animateTo(
                             index * size.height * 0.65,
-                            duration: Duration(seconds: 1),
+                            duration: Duration(milliseconds: 400),
                             curve: Curves.linear,
                           );
                           provider.setCurrentIndex(index);
