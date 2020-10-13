@@ -15,7 +15,7 @@ class CustomFlatButton extends StatelessWidget {
       child: FlatButton(
         onPressed: onTap,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(30, 12, 30, 12),
+          padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
           child: Text(
             text,
             style: defaultButtonStyle,
