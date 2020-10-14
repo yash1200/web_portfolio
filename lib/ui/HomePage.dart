@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
               ),
               actions: <Widget>[
                 ListView.builder(
-                  padding: EdgeInsets.only(right: size.width * 0.10),
+                  padding: EdgeInsets.only(right: size.width * 0.04),
                   itemCount: sections.length,
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
