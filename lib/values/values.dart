@@ -67,40 +67,40 @@ List<ModelExperience> projects = [
   ),
 ];
 
-List<String> language = [
+List<String> tools = [
+  'Flutter',
+  'Android',
+  'VueJs',
+  'NuxtJs',
+  'NodeJS',
+  'Mongo DB',
+  'Firebase',
+  'Git',
   'C',
   'C++',
   'Dart',
   'Java',
   'Python',
   'Javascript',
+  'Kotlin',
 ];
 
-List<String> langImage = [
+List<String> toolsImage = [
+  'assets/images/flutter.png',
+  'assets/images/android.png',
+  'assets/images/vue.png',
+  'assets/images/nuxt.png',
+  'assets/images/nodejs.png',
+  'assets/images/mongodb.png',
+  'assets/images/firebase.png',
+  'assets/images/git.png',
   'assets/images/c.png',
   'assets/images/cpp.png',
   'assets/images/dart.png',
   'assets/images/java.png',
   'assets/images/python.png',
   'assets/images/javascript.png',
-];
-
-List<String> tools = [
-  'Flutter',
-  'Android',
-  'Git',
-  'Firebase',
-  'Node JS',
-  'Mongo DB'
-];
-
-List<String> toolsImage = [
-  'assets/images/flutter.png',
-  'assets/images/android.png',
-  'assets/images/git.png',
-  'assets/images/firebase.png',
-  'assets/images/nodejs.png',
-  'assets/images/mongodb.png',
+  'assets/images/kotlin.png',
 ];
 
 List<String> social = [

@@ -9,7 +9,7 @@ class Projects extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 0.70,
+      height: size.height * 0.65,
       width: size.width,
       color: defaultLighter,
       child: Column(
@@ -21,7 +21,7 @@ class Projects extends StatelessWidget {
             center: true,
           ),
           SizedBox(
-            height: 70,
+            height: 60,
           ),
           Container(
             height: size.width * 0.185,

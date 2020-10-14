@@ -8,7 +8,7 @@ class Experiences extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 0.80,
+      height: size.height * 0.70,
       width: size.width,
       color: defaultLight,
       child: Column(
@@ -20,7 +20,7 @@ class Experiences extends StatelessWidget {
             center: true,
           ),
           SizedBox(
-            height: 30,
+            height: 15,
           ),
           Text(
             experienceQoute,
