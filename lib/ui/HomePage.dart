@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
                 child: Text(
                   provider.elevation == 1 ? 'Hey There!' : '',
                   style: GoogleFonts.openSans(
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
