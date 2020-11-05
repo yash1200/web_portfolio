@@ -122,6 +122,12 @@ class Contact extends StatelessWidget {
                                       const EdgeInsets.fromLTRB(5, 0, 5, 0),
                                   child: Tooltip(
                                     message: socialName[index],
+                                    padding: EdgeInsets.fromLTRB(12, 5, 12, 5),
+                                    textStyle: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w300,
+                                    ),
                                     child: Image.asset(
                                       social[index],
                                       height: size.width * 0.02,
