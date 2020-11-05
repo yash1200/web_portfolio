@@ -3,9 +3,14 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:resumeflutter/network/network.dart';
+import 'package:resumeflutter/widgets/SocialMediaImage.dart';
 import 'package:resumeflutter/widgets/Title.dart';
 import 'package:resumeflutter/values/values.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+
+import '../values/values.dart';
+import '../values/values.dart';
+import '../values/values.dart';
 
 class Contact extends StatelessWidget {
   @override
@@ -111,31 +116,10 @@ class Contact extends StatelessWidget {
                           physics: NeverScrollableScrollPhysics(),
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index) {
-                            return GestureDetector(
-                              onTap: () {
-                                Network().launchURL(contactUrlList[index]);
-                              },
-                              child: MouseRegion(
-                                cursor: SystemMouseCursors.click,
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                  child: Tooltip(
-                                    message: socialName[index],
-                                    padding: EdgeInsets.fromLTRB(12, 5, 12, 5),
-                                    textStyle: TextStyle(
-                                      fontSize: 16,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w300,
-                                    ),
-                                    child: Image.asset(
-                                      social[index],
-                                      height: size.width * 0.02,
-                                      width: size.width * 0.02,
-                                    ),
-                                  ),
-                                ),
-                              ),
+                            return SocialMediaImage(
+                              image: social[index],
+                              url: contactUrlList[index],
+                              message: socialName[index],
                             );
                           },
                         ),
