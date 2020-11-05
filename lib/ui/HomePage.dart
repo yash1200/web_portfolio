@@ -94,7 +94,7 @@ class _HomePageState extends State<HomePage> {
           provider.setCurrentIndex(
             scrollController.offset ~/ (size.height * 0.60),
           );
-          return;
+          return true;
         },
         child: SingleChildScrollView(
           controller: scrollController,
