@@ -18,7 +18,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final ScrollController scrollController = ScrollController();
+  ScrollController scrollController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    scrollController = ScrollController();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -84,10 +91,11 @@ class _HomePageState extends State<HomePage> {
             ),
       body: NotificationListener(
         onNotification: (scrollNotification) {
-          if (scrollController.offset == 0) {
+          if (scrollController.offset == 0 && provider.elevation != 0) {
             provider.setBackgroundColor(defaultLight);
             provider.setElevation(0);
-          } else {
+          } else if (scrollController.offset != 0 &&
+              provider.elevation != 1) {
             provider.setBackgroundColor(defaultDark);
             provider.setElevation(1);
           }
