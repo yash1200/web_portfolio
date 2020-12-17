@@ -18,6 +18,12 @@ List<String> sections = [
 
 List<ModelExperience> experiences = [
   ModelExperience(
+    "December 2020 - Present",
+    "SDE Intern",
+    "YourStory Media",
+    "Contributing in the YourStory application and other products.",
+  ),
+  ModelExperience(
     "August 2020 - Present",
     "Open Source Contributor",
     "Flutter",
