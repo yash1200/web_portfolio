@@ -65,24 +65,33 @@ class Contact extends StatelessWidget {
                       SizedBox(
                         width: 5,
                       ),
-                      SelectableText(
-                        email,
-                        style: styleDescription,
-                        enableInteractiveSelection: true,
-                        toolbarOptions: ToolbarOptions(
-                          copy: true,
-                          selectAll: true,
+                      Tooltip(
+                        message: 'Click to copy!',
+                        padding: EdgeInsets.fromLTRB(12, 5, 12, 5),
+                        textStyle: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w300,
                         ),
-                        onTap: () {
-                          Clipboard.setData(ClipboardData(text: email));
-                          Fluttertoast.showToast(
-                            msg: "Email copied to clipboard",
-                            textColor: defaultYellow,
-                            webBgColor:
-                                "linear-gradient(to right, #2b2c2c, #252525)",
-                            webPosition: "center",
-                          );
-                        },
+                        child: SelectableText(
+                          email,
+                          style: styleDescription,
+                          enableInteractiveSelection: true,
+                          toolbarOptions: ToolbarOptions(
+                            copy: true,
+                            selectAll: true,
+                          ),
+                          onTap: () {
+                            Clipboard.setData(ClipboardData(text: email));
+                            Fluttertoast.showToast(
+                              msg: "Email copied to clipboard",
+                              textColor: defaultYellow,
+                              webBgColor:
+                                  "linear-gradient(to right, #2b2c2c, #252525)",
+                              webPosition: "center",
+                            );
+                          },
+                        ),
                       ),
                     ],
                   ),
