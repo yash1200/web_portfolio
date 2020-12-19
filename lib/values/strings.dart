@@ -3,7 +3,7 @@ final String field = 'Full Stack Mobile Developer';
 final String email = 'yashjohri1200@gmail.com';
 final String location = 'New Delhi, India';
 final String resumeUrl =
-    'https://drive.google.com/file/d/1wAqf5A8C9oPQ4bYpazWG81626BC-lXNq/view?usp=sharing';
+    'https://drive.google.com/file/d/1kgCjeOi5Yg8m8Qb-yoeTnX8Mg2-7rILK/view?usp=sharing';
 final String githubRepoUrl = 'https://github.com/yash1200?tab=repositories';
 final String about =
     "I'm Yash Johri, currently pursuing Btech. in Computer Engineering"
