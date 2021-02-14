@@ -34,7 +34,9 @@ class Projects extends StatelessWidget {
                 return CustomTile(
                   exp: projects[index],
                   onTap: () {
-                    Network().launchURL(projectsUrlList[index]);
+                    Network().launchURL(
+                      projects[index].url,
+                    );
                   },
                 );
               },

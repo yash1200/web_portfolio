@@ -1,10 +1,13 @@
 import 'package:resumeflutter/Model/ModelExperience.dart';
+import 'package:resumeflutter/Model/social.dart';
+import 'package:resumeflutter/Model/tools.dart';
 
 export 'package:resumeflutter/values/colors.dart';
 export 'package:resumeflutter/values/strings.dart';
 export 'package:resumeflutter/values/textStyles.dart';
 
 double limit = 1000;
+final String _imagePath = 'assets/images';
 
 List<String> sections = [
   'Intro',
@@ -18,131 +21,173 @@ List<String> sections = [
 
 List<ModelExperience> experiences = [
   ModelExperience(
-    "December 2020 - Present",
-    "SDE Intern",
-    "YourStory Media",
-    "Contributing in the YourStory application and other products.",
+    time: 'December 2020 - Present',
+    title: 'SDE Intern',
+    subtitle: 'YourStory Media',
+    description:
+        'Contributing in the YourStory application and other products.',
   ),
   ModelExperience(
-    "August 2020 - Present",
-    "Open Source Contributor",
-    "Flutter",
-    "Contributed to the open source flutter repositories (flutter, plugins, gallery and packages).",
+    time: 'August 2020 - Present',
+    title: 'Open Source Contributor',
+    subtitle: 'Flutter',
+    description:
+        'Contributed to the open source flutter repositories (flutter, plugins, gallery and packages).',
   ),
   ModelExperience(
-    "May 2019 - August 2019",
-    "Flutter Developer",
-    "Aeologic Technologies",
-    "I worked as a Flutter developer, made modules and applications during the internship.",
+    time: 'May 2019 - August 2019',
+    title: 'Flutter Developer',
+    subtitle: 'Aeologic Technologies',
+    description:
+        'I worked as a Flutter developer, made modules and applications during the internship.',
   ),
 ];
 
 List<ModelExperience> education = [
   ModelExperience(
-    'August 2018 - Present',
-    'B.Tech Student',
-    'Jamia Millia Islamia',
-    'Currently pursuing a 4 year Bachelor of Technology course in Computer Ebgineering',
+    time: 'August 2018 - Present',
+    title: 'B.Tech Student',
+    subtitle: 'Jamia Millia Islamia',
+    description:
+        'Currently pursuing a 4 year Bachelor of Technology course in Computer Ebgineering',
   ),
   ModelExperience(
-    'April 2005 - March 2018',
-    'Inter School Student',
-    'Ingraham English School',
-    'Percentage - 90.60 % in 12th ISC Board',
+    time: 'April 2005 - March 2018',
+    title: 'Inter School Student',
+    subtitle: 'Ingraham English School',
+    description: 'Percentage - 90.60 % in 12th ISC Board',
   ),
 ];
 
 List<ModelExperience> projects = [
   ModelExperience(
-    'June 2020 - July 2020',
-    'Petals',
-    'Flutter, VueJs, NodeJs & MongoDB',
-    'Petal helps restaurants to manage social distancing in post covid world, showing all information by scanning a QR.',
+    time: 'June 2020 - July 2020',
+    title: 'Petals',
+    subtitle: 'Flutter, VueJs, NodeJs & MongoDB',
+    description:
+        'Petal helps restaurants to manage social distancing in post covid world, showing all information by scanning a QR.',
+    url: 'https://github.com/yash1200/Petals',
   ),
   ModelExperience(
-    'August 2019 - November 2019',
-    'BankGit',
-    'Flutter & Firebase',
-    'BankGit helps you manage your account and transactions more efficiently by breaking your account into branches.',
+    time: 'August 2019 - November 2019',
+    title: 'BankGit',
+    subtitle: 'Flutter & Firebase',
+    description:
+        'BankGit helps you manage your account and transactions more efficiently by breaking your account into branches.',
+    url: 'https://github.com/yash1200/BankGit',
   ),
   ModelExperience(
-    'August 2019 - November 2019',
-    'BoredPages',
-    'Flutter & Firebase',
-    'BoredPages is a social media platform where you can share memes and photos and can make money with its business model.',
+    time: 'August 2019 - November 2019',
+    title: 'BoredPages',
+    subtitle: 'Flutter & Firebase',
+    description:
+        'BoredPages is a social media platform where you can share memes and photos and can make money with its business model.',
+    url:
+        'https://play.google.com/store/apps/details?id=com.boredpages.borespages&hl=en_IN',
   ),
 ];
 
-List<String> tools = [
-  'Flutter',
-  'Android',
-  'VueJs',
-  'NuxtJs',
-  'NodeJS',
-  'Mongo DB',
-  'Firebase',
-  'Git',
-  'C',
-  'C++',
-  'Dart',
-  'Java',
-  'Python',
-  'Javascript',
-  'Kotlin',
-  'Bash',
+List<Tool> tools = [
+  Tool(
+    name: 'Flutter',
+    image: '$_imagePath/flutter.png',
+  ),
+  Tool(
+    name: 'Android',
+    image: '$_imagePath/android.png',
+  ),
+  Tool(
+    name: 'ReactJs',
+    image: '$_imagePath/react.png',
+  ),
+  Tool(
+    name: 'VueJs',
+    image: '$_imagePath/vue.png',
+  ),
+  Tool(
+    name: 'NodeJS',
+    image: '$_imagePath/nodejs.png',
+  ),
+  Tool(
+    name: 'Mongo DB',
+    image: '$_imagePath/mongodb.png',
+  ),
+  Tool(
+    name: 'Firebase',
+    image: '$_imagePath/firebase.png',
+  ),
+  Tool(
+    name: 'Git',
+    image: '$_imagePath/git.png',
+  ),
+  Tool(
+    name: 'C',
+    image: '$_imagePath/c.png',
+  ),
+  Tool(
+    name: 'C++',
+    image: '$_imagePath/cpp.png',
+  ),
+  Tool(
+    name: 'Dart',
+    image: '$_imagePath/dart.png',
+  ),
+  Tool(
+    name: 'Java',
+    image: '$_imagePath/java.png',
+  ),
+  Tool(
+    name: 'Python',
+    image: '$_imagePath/python.png',
+  ),
+  Tool(
+    name: 'Javascript',
+    image: '$_imagePath/javascript.png',
+  ),
+  Tool(
+    name: 'Kotlin',
+    image: '$_imagePath/kotlin.png',
+  ),
+  Tool(
+    name: 'Bash',
+    image: '$_imagePath/bash.png',
+  ),
 ];
 
-List<String> toolsImage = [
-  'assets/images/flutter.png',
-  'assets/images/android.png',
-  'assets/images/vue.png',
-  'assets/images/nuxt.png',
-  'assets/images/nodejs.png',
-  'assets/images/mongodb.png',
-  'assets/images/firebase.png',
-  'assets/images/git.png',
-  'assets/images/c.png',
-  'assets/images/cpp.png',
-  'assets/images/dart.png',
-  'assets/images/java.png',
-  'assets/images/python.png',
-  'assets/images/javascript.png',
-  'assets/images/kotlin.png',
-  'assets/images/bash.png',
-];
-
-List<String> social = [
-  'assets/images/github.png',
-  'assets/images/codeforces.png',
-  'assets/images/codechef.png',
-  'assets/images/hackerrank.png',
-  'assets/images/instagram.png',
-  'assets/images/linkedin.png',
-  'assets/images/twitter.png',
-];
-
-List<String> contactUrlList = [
-  'https://github.com/yash1200',
-  'https://codeforces.com/profile/yash1200',
-  'https://www.codechef.com/users/yashjohri_1200',
-  'https://www.hackerrank.com/yashjohri1200',
-  'https://www.instagram.com/just_johri/?hl=en',
-  'https://www.linkedin.com/in/yash-johri-61014717b/',
-  'https://twitter.com/YashJohri17',
-];
-
-List<String> projectsUrlList = [
-  'https://github.com/yash1200/Petals',
-  'https://github.com/yash1200/BankGit',
-  'https://play.google.com/store/apps/details?id=com.boredpages.borespages&hl=en_IN',
-];
-
-List<String> socialName = [
-  'Github',
-  'Codeforces',
-  'Codechef',
-  'Hackerrank',
-  'Instagram',
-  'Linkedin',
-  'Twitter',
+List<Social> social = [
+  Social(
+    name: 'Github',
+    image: '$_imagePath/github.png',
+    url: 'https://github.com/yash1200',
+  ),
+  Social(
+    name: 'Codeforces',
+    image: '$_imagePath/codeforces.png',
+    url: 'https://codeforces.com/profile/yash1200',
+  ),
+  Social(
+    name: 'Codechef',
+    image: '$_imagePath/codechef.png',
+    url: 'https://www.codechef.com/users/yashjohri_1200',
+  ),
+  Social(
+    name: 'Hackerrank',
+    image: '$_imagePath/hackerrank.png',
+    url: 'https://www.hackerrank.com/yashjohri1200',
+  ),
+  Social(
+    name: 'Instagram',
+    image: '$_imagePath/instagram.png',
+    url: 'https://www.instagram.com/just_johri/?hl=en',
+  ),
+  Social(
+    name: 'Linkedin',
+    image: '$_imagePath/linkedin.png',
+    url: 'https://www.linkedin.com/in/yash-johri-61014717b/',
+  ),
+  Social(
+    name: 'Twitter',
+    image: '$_imagePath/twitter.png',
+    url: 'https://twitter.com/YashJohri17',
+  ),
 ];

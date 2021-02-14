@@ -123,9 +123,9 @@ class Contact extends StatelessWidget {
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index) {
                             return SocialMediaImage(
-                              image: social[index],
-                              url: contactUrlList[index],
-                              message: socialName[index],
+                              image: social[index].image,
+                              url: social[index].url,
+                              toolTip: social[index].name,
                             );
                           },
                         ),

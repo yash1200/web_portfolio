@@ -5,10 +5,15 @@ import '../network/network.dart';
 
 class SocialMediaImage extends StatelessWidget {
   final String url;
-  final String message;
+  final String toolTip;
   final String image;
 
-  SocialMediaImage({this.url, this.image, this.message});
+  SocialMediaImage({
+    this.url,
+    this.image,
+    this.toolTip,
+  });
+  
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -21,7 +26,7 @@ class SocialMediaImage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
           child: Tooltip(
-            message: message,
+            message: toolTip,
             padding: EdgeInsets.fromLTRB(12, 5, 12, 5),
             textStyle: TextStyle(
               fontSize: 16,

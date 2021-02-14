@@ -1,13 +1,15 @@
 class ModelExperience {
-  String _date, _role, _company, _description;
+  final String time;
+  final String title;
+  final String subtitle;
+  final String description;
+  final String url;
 
-  ModelExperience(this._date, this._role, this._company, this._description);
-
-  String get description => _description;
-
-  String get company => _company;
-
-  String get role => _role;
-
-  String get date => _date;
+  ModelExperience({
+    this.time,
+    this.title,
+    this.subtitle,
+    this.description,
+    this.url,
+  });
 }

@@ -34,21 +34,21 @@ class CustomTile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                exp.date,
+                exp.time,
                 style: styleCompany,
               ),
               SizedBox(
                 height: 10,
               ),
               Text(
-                exp.role,
+                exp.title,
                 style: styleRole,
               ),
               SizedBox(
                 height: 10,
               ),
               Text(
-                exp.company,
+                exp.subtitle,
                 style: styleCompany,
               ),
               SizedBox(

@@ -34,8 +34,8 @@ class Skills extends StatelessWidget {
               ),
               itemBuilder: (BuildContext context, int index) {
                 return CustomContainer(
-                  image: toolsImage[index],
-                  text: tools[index],
+                  image: tools[index].image,
+                  text: tools[index].name,
                 );
               },
             ),
