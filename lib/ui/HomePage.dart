@@ -93,8 +93,7 @@ class _HomePageState extends State<HomePage> {
           if (scrollController.offset == 0 && provider.elevation != 0) {
             provider.setBackgroundColor(defaultLight);
             provider.setElevation(0);
-          } else if (scrollController.offset != 0 &&
-              provider.elevation != 1) {
+          } else if (scrollController.offset != 0 && provider.elevation != 1) {
             provider.setBackgroundColor(defaultDark);
             provider.setElevation(1);
           }
@@ -103,19 +102,17 @@ class _HomePageState extends State<HomePage> {
           );
           return true;
         },
-        child: SingleChildScrollView(
+        child: ListView(
           controller: scrollController,
-          child: Column(
-            children: <Widget>[
-              Introduction(),
-              About(),
-              Education(),
-              Skills(),
-              Experiences(),
-              Projects(),
-              Contact(),
-            ],
-          ),
+          children: [
+            Introduction(),
+            About(),
+            Education(),
+            Skills(),
+            Experiences(),
+            Projects(),
+            Contact(),
+          ],
         ),
       ),
     );
