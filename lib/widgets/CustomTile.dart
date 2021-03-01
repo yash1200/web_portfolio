@@ -8,7 +8,10 @@ class CustomTile extends StatelessWidget {
   final ModelExperience exp;
   final VoidCallback onTap;
 
-  CustomTile({this.exp, this.onTap});
+  CustomTile({
+    this.exp,
+    this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {

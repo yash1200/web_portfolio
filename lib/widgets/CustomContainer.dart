@@ -4,7 +4,10 @@ import 'package:resumeflutter/values/values.dart';
 class CustomContainer extends StatefulWidget {
   final String text, image;
 
-  CustomContainer({this.text, this.image});
+  CustomContainer({
+    this.text,
+    this.image,
+  });
 
   @override
   _CustomContainerState createState() => _CustomContainerState();

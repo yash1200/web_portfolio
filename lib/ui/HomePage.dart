@@ -19,17 +19,24 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   ScrollController scrollController;
+  AppProvider provider;
+  Size size;
 
   @override
   void initState() {
     super.initState();
-    scrollController = ScrollController();
+    scrollController = ScrollController()..addListener(_onScroll);
+  }
+
+  @override
+  void didChangeDependencies() {
+    size = MediaQuery.of(context).size;
+    provider = Provider.of<AppProvider>(context);
+    super.didChangeDependencies();
   }
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-    final provider = Provider.of<AppProvider>(context);
     return Scaffold(
       backgroundColor: defaultLight,
       appBar: size.width > limit
@@ -88,33 +95,42 @@ class _HomePageState extends State<HomePage> {
               preferredSize: Size.fromHeight(0),
               child: Container(),
             ),
-      body: NotificationListener(
-        onNotification: (scrollNotification) {
-          if (scrollController.offset == 0 && provider.elevation != 0) {
-            provider.setBackgroundColor(defaultLight);
-            provider.setElevation(0);
-          } else if (scrollController.offset != 0 && provider.elevation != 1) {
-            provider.setBackgroundColor(defaultDark);
-            provider.setElevation(1);
-          }
-          provider.setCurrentIndex(
-            scrollController.offset ~/ (size.height * 0.60),
-          );
-          return true;
-        },
-        child: ListView(
-          controller: scrollController,
-          children: [
-            Introduction(),
-            About(),
-            Education(),
-            Skills(),
-            Experiences(),
-            Projects(),
-            Contact(),
-          ],
-        ),
+      body: ListView(
+        controller: scrollController,
+        children: [
+          Introduction(),
+          About(),
+          Education(),
+          Skills(),
+          Experiences(),
+          Projects(),
+          Contact(),
+        ],
       ),
     );
+  }
+
+  void _onScroll() {
+    if (scrollController.offset == 0 && provider.elevation != 0) {
+      provider.setBackgroundColor(defaultLight);
+      provider.setElevation(0);
+    } else if (scrollController.offset != 0 && provider.elevation != 1) {
+      provider.setBackgroundColor(defaultDark);
+      provider.setElevation(1);
+    }
+    if (provider.currentIndex != 0 &&
+        scrollController.offset ~/ (size.height * 0.60) != 0) {
+      provider.setCurrentIndex(
+        scrollController.offset ~/ (size.height * 0.60),
+      );
+    }
+  }
+
+  @override
+  void dispose() {
+    scrollController.removeListener(_onScroll);
+    provider.dispose();
+    scrollController.dispose();
+    super.dispose();
   }
 }

@@ -6,13 +6,16 @@ class CustomFlatButton extends StatelessWidget {
   final VoidCallback onTap;
   final String text;
 
-  CustomFlatButton({this.onTap, this.text});
+  CustomFlatButton({
+    this.onTap,
+    this.text,
+  });
 
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
       cursor: SystemMouseCursors.click,
-      child: FlatButton(
+      child: TextButton(
         onPressed: onTap,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
@@ -21,11 +24,15 @@ class CustomFlatButton extends StatelessWidget {
             style: defaultButtonStyle,
           ),
         ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-          side: BorderSide(
-            color: defaultYellow,
-            width: 2,
+        style: ButtonStyle(
+          shape: MaterialStateProperty.all(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+              side: BorderSide(
+                color: defaultYellow,
+                width: 2,
+              ),
+            ),
           ),
         ),
       ),
