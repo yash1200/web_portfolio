@@ -90,17 +90,24 @@ class _HomePageState extends State<HomePage> {
               preferredSize: Size.fromHeight(0),
               child: Container(),
             ),
-      body: ListView(
+      body: Scrollbar(
         controller: scrollController,
-        children: [
-          Introduction(),
-          About(),
-          Education(),
-          Skills(),
-          Experiences(),
-          Projects(),
-          Contact(),
-        ],
+        isAlwaysShown: true,
+        interactive: true,
+        hoverThickness: 16,
+        thickness: 16,
+        child: ListView(
+          controller: scrollController,
+          children: [
+            Introduction(),
+            About(),
+            Education(),
+            Skills(),
+            Experiences(),
+            Projects(),
+            Contact(),
+          ],
+        ),
       ),
     );
   }
