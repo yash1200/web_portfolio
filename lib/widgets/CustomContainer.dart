@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:resumeflutter/values/values.dart';
 
 class CustomContainer extends StatefulWidget {
-  final String text, image;
+  final String text;
+  final String image;
 
   CustomContainer({
-    this.text,
-    this.image,
+    required this.text,
+    required this.image,
   });
 
   @override

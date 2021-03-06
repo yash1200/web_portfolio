@@ -3,13 +3,13 @@ class ModelExperience {
   final String title;
   final String subtitle;
   final String description;
-  final String url;
+  final String? url;
 
   ModelExperience({
-    this.time,
-    this.title,
-    this.subtitle,
-    this.description,
+    required this.time,
+    required this.title,
+    required this.subtitle,
+    required this.description,
     this.url,
   });
 }

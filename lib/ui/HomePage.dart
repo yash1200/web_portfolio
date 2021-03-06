@@ -18,20 +18,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  ScrollController scrollController;
-  AppProvider provider;
-  Size size;
-
-  @override
-  void initState() {
-    super.initState();
-    scrollController = ScrollController()..addListener(_onScroll);
-  }
+  ScrollController scrollController = ScrollController();
+  AppProvider? provider;
+  late Size size;
 
   @override
   void didChangeDependencies() {
     size = MediaQuery.of(context).size;
     provider = Provider.of<AppProvider>(context);
+    scrollController.addListener(_onScroll);
     super.didChangeDependencies();
   }
 
@@ -41,12 +36,12 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: defaultLight,
       appBar: size.width > limit
           ? AppBar(
-              backgroundColor: provider.backgroundColor,
-              elevation: provider.elevation,
+              backgroundColor: provider!.backgroundColor,
+              elevation: provider!.elevation,
               title: Padding(
                 padding: EdgeInsets.only(left: size.width * 0.10),
                 child: Text(
-                  provider.elevation == 1 ? 'Hey There!' : '',
+                  provider!.elevation == 1 ? 'Hey There!' : '',
                   style: GoogleFonts.openSans(
                     fontWeight: FontWeight.w500,
                   ),
@@ -68,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                             duration: Duration(milliseconds: 400),
                             curve: Curves.linear,
                           );
-                          provider.setCurrentIndex(index);
+                          provider!.setCurrentIndex(index);
                         },
                         child: MouseRegion(
                           cursor: SystemMouseCursors.click,
@@ -77,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                             child: Text(
                               sections[index],
                               style: TextStyle(
-                                color: index == provider.currentIndex
+                                color: index == provider!.currentIndex
                                     ? defaultYellow
                                     : defaultGrey,
                                 fontSize: 20,
@@ -111,25 +106,23 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _onScroll() {
-    if (scrollController.offset == 0 && provider.elevation != 0) {
-      provider.setBackgroundColor(defaultLight);
-      provider.setElevation(0);
-    } else if (scrollController.offset != 0 && provider.elevation != 1) {
-      provider.setBackgroundColor(defaultDark);
-      provider.setElevation(1);
+    if (provider == null) return;
+    if (scrollController.offset == 0 && provider?.elevation != 0) {
+      provider?.setBackgroundColor(defaultLight);
+      provider?.setElevation(0);
+    } else if (scrollController.offset != 0 && provider?.elevation != 1) {
+      provider?.setBackgroundColor(defaultDark);
+      provider?.setElevation(1);
     }
-    if (provider.currentIndex != 0 &&
-        scrollController.offset ~/ (size.height * 0.60) != 0) {
-      provider.setCurrentIndex(
-        scrollController.offset ~/ (size.height * 0.60),
-      );
-    }
+    provider?.setCurrentIndex(
+      scrollController.offset ~/ (size.height * 0.60),
+    );
   }
 
   @override
   void dispose() {
     scrollController.removeListener(_onScroll);
-    provider.dispose();
+    provider!.dispose();
     scrollController.dispose();
     super.dispose();
   }

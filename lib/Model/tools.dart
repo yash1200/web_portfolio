@@ -3,7 +3,7 @@ class Tool {
   String image;
 
   Tool({
-    this.name,
-    this.image,
+    required this.name,
+    required this.image,
   });
 }

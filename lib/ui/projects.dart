@@ -35,7 +35,7 @@ class Projects extends StatelessWidget {
                   exp: projects[index],
                   onTap: () {
                     Network().launchURL(
-                      projects[index].url,
+                      projects[index].url!,
                     );
                   },
                 );

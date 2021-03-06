@@ -9,9 +9,9 @@ class SocialMediaImage extends StatelessWidget {
   final String image;
 
   SocialMediaImage({
-    this.url,
-    this.image,
-    this.toolTip,
+    required this.url,
+    required this.image,
+    required this.toolTip,
   });
   
   @override

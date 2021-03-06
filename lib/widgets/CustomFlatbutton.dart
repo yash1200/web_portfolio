@@ -7,8 +7,8 @@ class CustomFlatButton extends StatelessWidget {
   final String text;
 
   CustomFlatButton({
-    this.onTap,
-    this.text,
+    required this.onTap,
+    required this.text,
   });
 
   @override

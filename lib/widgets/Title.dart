@@ -5,7 +5,10 @@ class CustomTitle extends StatelessWidget {
   final String text;
   final bool center;
 
-  CustomTitle({this.text, this.center = true});
+  CustomTitle({
+    required this.text,
+    this.center = true,
+  });
 
   @override
   Widget build(BuildContext context) {

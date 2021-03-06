@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:resumeflutter/network/network.dart';
 import 'package:resumeflutter/widgets/CustomFlatbutton.dart';
@@ -47,13 +46,11 @@ class Introduction extends StatelessWidget {
             width: size.width * 0.05,
           ),
           Container(
-            height: min(size.height * 0.60, size.width * 0.60),
-            width: min(size.height * 0.60, size.width * 0.60),
-            child: FlareActor(
-              'assets/Boy.flr',
-              alignment: Alignment.center,
+            height: min(size.height * 0.65, size.width * 0.65),
+            width: min(size.height * 0.65, size.width * 0.65),
+            child: Image.asset(
+              'assets/images/boy1.png',
               fit: BoxFit.contain,
-              animation: "coding",
             ),
           ),
         ],

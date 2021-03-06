@@ -6,10 +6,10 @@ import 'package:resumeflutter/values/values.dart';
 
 class CustomTile extends StatelessWidget {
   final ModelExperience exp;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
 
   CustomTile({
-    this.exp,
+    required this.exp,
     this.onTap,
   });
 
