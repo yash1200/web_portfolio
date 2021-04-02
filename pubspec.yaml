@@ -10,9 +10,10 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   google_fonts: ^2.0.0
-  url_launcher: ^6.0.2
+  url_launcher: ^6.0.3
   provider: ^5.0.0
-  fluttertoast: ^8.0.1-nullsafety.0
+  fluttertoast: ^8.0.3
+  url_strategy: ^0.2.0
 
 dev_dependencies:
   flutter_test:

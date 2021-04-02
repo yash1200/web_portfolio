@@ -101,6 +101,10 @@ List<Tool> tools = [
     image: '$_imagePath/react.png',
   ),
   Tool(
+    name: 'Electron',
+    image: '$_imagePath/electron.png',
+  ),
+  Tool(
     name: 'VueJs',
     image: '$_imagePath/vue.png',
   ),
@@ -143,6 +147,10 @@ List<Tool> tools = [
   Tool(
     name: 'Javascript',
     image: '$_imagePath/javascript.png',
+  ),
+  Tool(
+    name: 'Typescript',
+    image: '$_imagePath/typescript.png',
   ),
   Tool(
     name: 'Kotlin',
