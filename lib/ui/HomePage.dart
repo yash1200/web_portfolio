@@ -38,6 +38,7 @@ class _HomePageState extends State<HomePage> {
           ? AppBar(
               backgroundColor: provider!.backgroundColor,
               elevation: provider!.elevation,
+              centerTitle: false,
               title: Padding(
                 padding: EdgeInsets.only(left: size.width * 0.10),
                 child: Text(
