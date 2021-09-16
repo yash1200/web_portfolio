@@ -21,18 +21,17 @@ List<String> sections = [
 
 List<ModelExperience> experiences = [
   ModelExperience(
-    time: 'December 2020 - Present',
+    time: 'March 2020 - Present',
+    title: 'SDE Intern',
+    subtitle: 'AfterShoot Inc.',
+    description: 'Contributing in the AfterShoot desktop app and website.',
+  ),
+  ModelExperience(
+    time: 'December 2020 - March 2020',
     title: 'SDE Intern',
     subtitle: 'YourStory Media',
     description:
         'Contributing in the YourStory application and other products.',
-  ),
-  ModelExperience(
-    time: 'August 2020 - Present',
-    title: 'Open Source Contributor',
-    subtitle: 'Flutter',
-    description:
-        'Contributed to the open source flutter repositories (flutter, plugins, gallery and packages).',
   ),
   ModelExperience(
     time: 'May 2019 - August 2019',
