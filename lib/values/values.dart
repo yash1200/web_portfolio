@@ -120,28 +120,12 @@ List<Tool> tools = [
     image: '$_imagePath/firebase.png',
   ),
   Tool(
-    name: 'Git',
-    image: '$_imagePath/git.png',
-  ),
-  Tool(
-    name: 'C',
-    image: '$_imagePath/c.png',
-  ),
-  Tool(
     name: 'C++',
     image: '$_imagePath/cpp.png',
   ),
   Tool(
     name: 'Dart',
     image: '$_imagePath/dart.png',
-  ),
-  Tool(
-    name: 'Java',
-    image: '$_imagePath/java.png',
-  ),
-  Tool(
-    name: 'Python',
-    image: '$_imagePath/python.png',
   ),
   Tool(
     name: 'Javascript',
@@ -152,8 +136,24 @@ List<Tool> tools = [
     image: '$_imagePath/typescript.png',
   ),
   Tool(
+    name: 'Java',
+    image: '$_imagePath/java.png',
+  ),
+  Tool(
+    name: 'Python',
+    image: '$_imagePath/python.png',
+  ),
+  Tool(
+    name: 'C',
+    image: '$_imagePath/c.png',
+  ),
+  Tool(
     name: 'Kotlin',
     image: '$_imagePath/kotlin.png',
+  ),
+  Tool(
+    name: 'Git',
+    image: '$_imagePath/git.png',
   ),
   Tool(
     name: 'Bash',
